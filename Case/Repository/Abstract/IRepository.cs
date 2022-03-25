@@ -8,21 +8,13 @@ namespace Case.Repository
     public interface IRepository<TEntity> where TEntity:class
     {
         void Add(TEntity entity);
-        void Remove(string Id);
+        void Remove(int Id);
         void Update(TEntity entity);
 
-        TEntity Find(string Id);
+        TEntity Find(int Id);
 
-        /// <summary>
-        /// Linq query
-        /// </summary>
-        /// <returns></returns>
         IQueryable<TEntity> GetQuery();
-        /// <summary>
-        /// Sql query
-        /// </summary>
-        /// <param name="query"></param>
-        /// <returns></returns>
+ 
         IQueryable GetSqlRawQuery(string query);
 
         void Save();

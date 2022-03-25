@@ -25,7 +25,7 @@ namespace Case.Repository
             _dbSet.Add(entity);
         }
 
-        public virtual TEntity Find(string Id)
+        public virtual TEntity Find(int Id)
         {
             return _dbSet.Find(Id);
         }
@@ -41,11 +41,9 @@ namespace Case.Repository
 
             return _dbSet.AsQueryable();
 
-
-            //return _dbContext.Set<TEntity>().FromSqlRaw()
         }
 
-        public virtual void Remove(string Id)
+        public virtual void Remove(int Id)
         {
             var entity = Find(Id);
             _dbSet.Remove(entity);

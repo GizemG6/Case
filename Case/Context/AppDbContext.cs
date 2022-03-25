@@ -34,7 +34,6 @@ namespace Case.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.ApplyConfiguration(new AppUserConfiguration());
             modelBuilder.ApplyConfigurationsFromAssembly(GetType().Assembly);
         }
     }
